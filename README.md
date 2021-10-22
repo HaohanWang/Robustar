@@ -3,7 +3,7 @@
 # Robustar
 Interactive Toolbox for Robust Vision Classification
 
-### Main Use Case (workflow of Robustsar): 
+### Main Use Case (Workflow): 
 
 ![workflow](readme_support/RobustarFunction.png "workflow")
 
@@ -13,6 +13,6 @@ Interactive Toolbox for Robust Vision Classification
 4.	the users can use the drawing tools to brush out the superficial pixels; 
 5.	new annotation of these images will serve as the role as augmented images for continued training.
 
-### Brief Demo
+### Video Demo
 
-<video src='https://github.com/HaohanWang/Robustar/blob/main/readme_support/simpleDemo.m4v' width=180/>
+
