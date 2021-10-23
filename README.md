@@ -16,3 +16,9 @@ Interactive Toolbox for Robust Vision Classification
 ### Video Demo
 
 ![Quick Demo](readme_support/simpleDemo.gif "demo")
+
+### Installation 
+
+To install Robustar, first please [intall Docker](https://docs.docker.com/engine/install/) locally. 
+
+Then, one can start the robustar with [robustar.sh](https://github.com/HaohanWang/Robustar/blob/main/robustar.sh) included in this repository.  
