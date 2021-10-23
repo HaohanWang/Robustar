@@ -15,4 +15,4 @@ Interactive Toolbox for Robust Vision Classification
 
 ### Video Demo
 
-![Quick Demo](readme_support/simpleDemo.gif "logo")
+![Quick Demo](readme_support/simpleDemo.gif "demo")
