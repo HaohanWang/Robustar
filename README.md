@@ -71,7 +71,7 @@ We are welcoming feedbacks of all kinds!
 
 ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FHaohanWang%2FRobustar)
 
-### Contact
+### Contact  <sub><sup><sub>(names listed alphabetically)</sup></sub></sup>
 
 [Chonghan Chen](https://github.com/PaulCCCCCCH)
 &middot; 
@@ -79,5 +79,4 @@ We are welcoming feedbacks of all kinds!
 &middot;
 [Haohan Wang](http://www.cs.cmu.edu/~haohanw/) 
 
-<sub><sup>(names listed alphabetically)</sup></sub>
 
