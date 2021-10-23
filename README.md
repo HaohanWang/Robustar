@@ -69,6 +69,8 @@ While we are grateful that the community is interested in using our system, plea
 
 We are welcoming feedbacks of all kinds! 
 
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FHaohanWang%2FRobustar)
+
 ### Contact
 
 [Chonghan Chen](https://github.com/PaulCCCCCCH)
@@ -76,3 +78,5 @@ We are welcoming feedbacks of all kinds!
 [Donglin Chen](https://github.com/don-lin) 
 &middot;
 [Haohan Wang](http://www.cs.cmu.edu/~haohanw/) 
+
+
