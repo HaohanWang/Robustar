@@ -79,4 +79,5 @@ We are welcoming feedbacks of all kinds!
 &middot;
 [Haohan Wang](http://www.cs.cmu.edu/~haohanw/) 
 
+<sub><sup>(names listed alphabetically)</sup></sub>
 
