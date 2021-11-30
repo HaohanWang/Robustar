@@ -75,8 +75,6 @@ We are welcoming feedbacks of all kinds!
 
 [Chonghan Chen](https://github.com/PaulCCCCCCH)
 &middot; 
-[Donglin Chen](https://github.com/don-lin) 
-&middot;
 [Haohan Wang](http://www.cs.cmu.edu/~haohanw/) 
 
 
