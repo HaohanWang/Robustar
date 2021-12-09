@@ -76,5 +76,9 @@ We are welcoming feedbacks of all kinds!
 [Chonghan Chen](https://github.com/PaulCCCCCCH)
 &middot; 
 [Haohan Wang](http://www.cs.cmu.edu/~haohanw/) 
+&middot; 
+[Leyang Hu](mailto:leonleyanghu@gmail.com)
+&middot; 
+[Yuhao Zhang](mailto:yhao.zhang98@gmail.com)
 
 
