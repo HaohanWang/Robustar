@@ -79,6 +79,8 @@ We are welcoming feedbacks of all kinds!
 &middot; 
 [Leyang Hu](mailto:leonleyanghu@gmail.com)
 &middot; 
+[Linjing Sun](https://github.com/scyls)
+&middot; 
 [Yuhao Zhang](mailto:yhao.zhang98@gmail.com)
 
 
