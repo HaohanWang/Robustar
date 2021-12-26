@@ -19,11 +19,11 @@ Interactive Toolbox for Robust Vision Classification
 
 ### Installation 
 
-- To install Robustar, please first [intall Docker](https://docs.docker.com/engine/install/) locally. 
-- Then, one can start the robustar with [robustar.sh](https://github.com/HaohanWang/Robustar/blob/main/robustar.sh) included in this repository.  
+- To install Robustar, please first [intall Docker](https://docs.docker.com/engine/install/) locally. If you wish to use GPU, please install a few more dependencies with`install-nvidia-toolkit.sh` .
+- Then, one can start the robustar with [robustar.sh](https://github.com/HaohanWang/Robustar/blob/main/robustar.sh) included in this repository.  You may need to use `sudo` if you are on UNIX systems, or open run a terminal as system admin on Windows.
 
-  - First time users please run `./robustar.sh setup` to pull docker image. 
-  - One can run `./robustar.sh run -t $TRAINING_IMAGES_FOLDER -e $TESTING_IMAGES_FOLDER -c $MODEL_CHECKPOINTS_FOLDER` to start current robustar
+  - First time users please run `./robustar.sh -m setup -a <version>` to pull docker image. Please visit our [DockerHub page](https://hub.docker.com/repository/docker/paulcccccch/robustar) for a complete list of versions.
+  - One can run `./robustar.sh -m run <options>` to start robustar. Please read the next section for detailed options. You can also refer to `example.sh` for sample running configurations.
 
 - Directly run `./robustar.sh` will display the help message. 
 
@@ -32,39 +32,48 @@ Interactive Toolbox for Robust Vision Classification
 
   > Help documentation for robustar.
 > 
-> Basic usage: robustar [command]
+> Basic usage: robustar -m [command] [options]
 > 
 > [command] can be one of the following: setup, run.
 > 
-> setup will prepare and pulling the docker image.
+> setup will prepare and pull the docker image, and create a new container for it.
 > 
 > run will start to run the system.
 > 
-> Command line switches are optional. The following switches are recognized.
-> 
+> Command line switches [options] are optional. The following switches are recognized.
 > -p  --Sets the value for the port docker forwards to. Default is 8000.
-> 
 > -a  --Sets the value for the tag of the image. Default is latest.
-> 
 > -n  --Sets the value for the name of the docker container. Default is robustar.
-> 
-> -t  --Sets the path of training images folder. Currently only supports the PyTorch DataLoader folder structure
-> 
+> -t  --Sets the path of training images folder. Currently only supports the PyTorch DataLoader folder structure as following
+>                  images/
+>                          dogs/
+>                                  1.png
+>                                  2.png
+>                          cats/
+>                                  adc.png
+>                                  eqx.png
 > -e  --Sets the path of testing images folder. Currently only supports the PyTorch DataLoader folder structure
-> 
 > -i  --Sets the path of the calculation result of the influence function.
-> 
 > -c  --Sets the path of model check points folder.
-> 
-> -o  --Sets the path of configuration file. Default is config.txt.
-> 
+> -o  --Sets the path of configuration file. Default is configs.json.
 > -h  --Displays this help message. No further functions are performed.
-  
+
 </details>
+
+
+
+### Contributing
+
+We will open source our code by the end of 2021 (which is only a few days away, happy new year!).
+
+We invite you to check out our [Trello board](https://trello.com/b/7xCpD30K/robustar) to get updated with our latest updates!
+
+
 
 ### Disclaimer
 
-Robustar is still in its development phase.
+Robustar has finally released v0.0.1-beta! :sparkles:
+
 While we are grateful that the community is interested in using our system, please bear with us that some functions are still in inchoate forms. 
 
 We are welcoming feedbacks of all kinds! 
@@ -82,5 +91,4 @@ We are welcoming feedbacks of all kinds!
 [Linjing Sun](https://github.com/scyls)
 &middot; 
 [Yuhao Zhang](mailto:yhao.zhang98@gmail.com)
-
 
