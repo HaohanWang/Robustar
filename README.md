@@ -45,13 +45,13 @@ Interactive Toolbox for Robust Vision Classification
 > -a  --Sets the value for the tag of the image. Default is latest.  
 > -n  --Sets the value for the name of the docker container. Default is robustar.  
 > -t  --Sets the path of training images folder. Currently only supports the PyTorch DataLoader folder structure as following  
->                  images/  
->                          dogs/  
->                                  1.png  
->                                  2.png  
->                          cats/  
->                                  adc.png  
->                                  eqx.png  
+> -----images/  
+> ----------dogs/  
+> ---------------1.png  
+> ---------------2.png  
+> ----------cats/  
+> ---------------adc.png  
+> ---------------eqx.png  
 > -e  --Sets the path of testing images folder. Currently only supports the PyTorch DataLoader folder structure  
 > -i  --Sets the path of the calculation result of the influence function.  
 > -c  --Sets the path of model check points folder.  
