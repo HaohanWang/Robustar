@@ -17,7 +17,7 @@ This repository is for end users. For source code, please visit our [source code
 
 ### Video Demo
 
-![Quick Demo](readme_support/simpleDemo.gif "demo")
+![Quick Demo](readme_support/simpleDemoOld.gif "demo")
 
 ### Installation 
 
