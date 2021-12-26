@@ -3,6 +3,8 @@
 # Robustar
 Interactive Toolbox for Robust Vision Classification
 
+This repository is for end users. For source code, please visit our [source code repository](https://github.com/HaohanWang/Robustar_implementation). 
+
 ### Main Use Case (Workflow): 
 
 ![workflow](readme_support/RobustarFunction.png "workflow")
@@ -64,9 +66,9 @@ Interactive Toolbox for Robust Vision Classification
 
 ### Contributing
 
-We will open source our code by the end of 2021 (which is only a few days away, happy new year!).
+Please visit our [source code repository](https://github.com/HaohanWang/Robustar_implementation). 
 
-We invite you to check out our [Trello board](https://trello.com/b/7xCpD30K/robustar) to get updated with our latest updates!
+Also, feel free to check out our [Trello board](https://trello.com/b/7xCpD30K/robustar) to stay tuned for our latest updates!
 
 
 
