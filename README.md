@@ -22,7 +22,7 @@ This repository is for end users. For source code, please visit our [source code
 ### Installation 
 
 - To install Robustar, please first [intall Docker](https://docs.docker.com/engine/install/) locally. If you wish to use GPU, please install a few more dependencies with`install-nvidia-toolkit.sh` .
-- Then, one can start the robustar with [robustar.sh](https://github.com/HaohanWang/Robustar/raw/main/robustar.sh) included in this repository.  You may need to use `sudo` if you are on UNIX systems, or open run a terminal as system admin on Windows.
+- Then, one can start the robustar with [robustar.sh](https://github.com/HaohanWang/Robustar/blob/main/robustar.sh) \[[Download](https://downgit.github.io/#/home?url=https://github.com/HaohanWang/Robustar/blob/main/robustar.sh)\] included in this repository.  You may need to use `sudo` if you are on UNIX systems, or open run a terminal as system admin on Windows.
 
   - First time users please run `./robustar.sh -m setup -a <version>` to pull docker image. Please visit our [DockerHub page](https://hub.docker.com/repository/docker/paulcccccch/robustar) for a complete list of versions.
   - One can run `./robustar.sh -m run <options>` to start robustar. Please read the next section for detailed options. You can also refer to `example.sh` for sample running configurations.
