@@ -25,7 +25,7 @@ This repository is for end users. For source code, please visit our [source code
 - Then, one can start the robustar with [robustar.sh](https://github.com/HaohanWang/Robustar/blob/main/robustar.sh?raw=1) included in this repository.  You may need to use `sudo` if you are on UNIX systems, or open run a terminal as system admin on Windows.
 
   - First time users please run `./robustar.sh -m setup -a <version>` to pull docker image. Please visit our [DockerHub page](https://hub.docker.com/repository/docker/paulcccccch/robustar) for a complete list of versions.
-  - One can run `./robustar.sh -m run <options>` to start robustar. Please read the next section for detailed options. You can also refer to `example.sh` for sample running configurations.
+  - Then, run `./robustar.sh -m run <options>` to start robustar.  For GPU users, run with `./robustar.sh -m run_gpu <options>` instead. Please read the next section for choices of`<options>`. You can also refer to `example.sh` for sample running configurations.
 
 - Directly run `./robustar.sh` will display the help message. 
 

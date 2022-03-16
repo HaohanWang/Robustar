@@ -68,7 +68,24 @@ function SETUP {
 function RUN {
   docker run --name ${OPT_NAME} -it -d \
     -p 127.0.0.1:${OPT_PORT}:80 \
-    -p 127.0.0.1:6848:8000 \
+    -p 127.0.0.1:6848:8000/tcp \
+    -p 127.0.0.1:6848:8000/udp \
+    -p 127.0.0.1:6006:6006 \
+    --mount type=bind,source=${TRAIN_FOLDER},target=/Robustar2/dataset/train \
+    --mount type=bind,source=${TEST_FOLDER},target=/Robustar2/dataset/test \
+    --mount type=bind,source=${INFLU_FOLDER},target=/Robustar2/influence_images \
+    --mount type=bind,source=${CHECK_FOLDER},target=/Robustar2/checkpoint_images \
+    -v $CONFIG_FILE:/Robustar2/configs.json \
+    $IMAGE_NAME && echo "Robustar is available at http://localhost:$OPT_PORT "
+    # /bin/bash /run.sh && xdg-open "http://${IP}:${OPT_PORT}" \
+  # docker cp ${CONFIG_FILE} ${OPT_NAME}:/Robustar2/configs.json
+}
+
+function RUN_GPU {
+  docker run --name ${OPT_NAME} -it -d \
+    -p 127.0.0.1:${OPT_PORT}:80 \
+    -p 127.0.0.1:6848:8000/tcp \
+    -p 127.0.0.1:6848:8000/udp \
     -p 127.0.0.1:6006:6006 \
     --mount type=bind,source=${TRAIN_FOLDER},target=/Robustar2/dataset/train \
     --mount type=bind,source=${TEST_FOLDER},target=/Robustar2/dataset/test \
@@ -80,6 +97,7 @@ function RUN {
     # /bin/bash /run.sh && xdg-open "http://${IP}:${OPT_PORT}" \
   # docker cp ${CONFIG_FILE} ${OPT_NAME}:/Robustar2/configs.json
 }
+
 
 
 ### Start getopts code ###
@@ -149,6 +167,9 @@ if [ "$RUN_MODE" == "setup" ]; then
   exit 0
 elif [ "$RUN_MODE" == "run" ]; then
   RUN
+  exit 0
+elif [ "$RUN_MODE" == "run_gpu" ]; then
+  RUN_GPU
   exit 0
 else
   HELP

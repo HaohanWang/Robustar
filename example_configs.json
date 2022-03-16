@@ -1,11 +1,12 @@
 {
-    "weight_to_load": "resnet-34.pth",
+    "weight_to_load": "resnet-18.pth",
     "model_arch": "resnet-18-32x32",
-    "device": "cuda",
-    "pre_trained": true,
+    "device": "cpu",
+    "pre_trained": false,
     "batch_size": 16,
     "shuffle": true,
     "num_workers": 8,
     "image_size": 32,
-    "image_padding": "short_side"
+    "image_padding": "none",
+    "num_classes": 9
 }
