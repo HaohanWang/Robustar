@@ -15,9 +15,9 @@ This repository is for end users. For source code, please visit our [source code
 4.	the users can use the drawing tools to brush out the superficial pixels; 
 5.	new annotation of these images will serve as the role as augmented images for continued training.
 
-### Video Demo
+### Video Summary <sub><sup><sub>(click to watch the video)</sub></sup></sub>
 
-![Quick Demo](readme_support/simpleDemoOld.gif "demo")
+[![Demo](https://img.youtube.com/vi/clay51rxxnQ/hqdefault.jpg)](https://www.youtube.com/watch?v=clay51rxxnQ)
 
 ### Installation 
 
