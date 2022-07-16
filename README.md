@@ -17,7 +17,7 @@ This repository is for end users. For source code, please visit our [source code
 
 ### Video Summary <sub><sup><sub>(click to watch the video)</sub></sup></sub>
 
-[![Demo](https://img.youtube.com/vi/clay51rxxnQ/hqdefault.jpg)](https://www.youtube.com/watch?v=clay51rxxnQ)
+[![Demo](https://img.youtube.com/vi/Ezo_dtxZkEk/hqdefault.jpg)](https://youtu.be/Ezo_dtxZkEk)
 
 ### Installation 
 
