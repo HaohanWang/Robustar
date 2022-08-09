@@ -5,6 +5,9 @@ Interactive Toolbox for Pricise Data Annotation and Robust Vision Learning
 
 This repository is for end users. For source code, please visit our [source code repository](https://github.com/HaohanWang/Robustar_implementation). 
 
+For a more academic-style introduction, one can also refer to our workshop paper released recently: 
+   - [Robustar: Interactive Toolbox Supporting Precise Data Annotation for Robust Vision Learning](https://arxiv.org/abs/2207.08944)
+
 ### Main Use Case (Workflow): 
 
 ![workflow](readme_support/RobustarFunction.png "workflow")
