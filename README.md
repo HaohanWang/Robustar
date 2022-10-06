@@ -1,7 +1,7 @@
 ![Logo](readme_support/logo_long.png "logo")
 
 # Robustar
-Interactive Toolbox for Pricise Data Annotation and Robust Vision Learning
+Interactive Toolbox for Precise Data Annotation and Robust Vision Learning
 
 This repository is for end users. For source code, please visit our [source code repository](https://github.com/HaohanWang/Robustar_implementation). 
 
