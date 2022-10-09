@@ -96,4 +96,5 @@ We are welcoming feedbacks of all kinds!
 [Linjing Sun](https://github.com/scyls)
 &middot; 
 [Yuhao Zhang](mailto:yhao.zhang98@gmail.com)
-
+&middot; 
+[Xinnuo Li](mailto:monistoday@gmail.com)
