@@ -1,13 +1,22 @@
 site_name: robustar-docs
+repo_url: https://github.com/HaohanWang/Robustar
 theme:
   features:
     - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
   name: material
   favicon: img/favicon.ico
 nav:
   - Home: index.md
-  - Influence: influence.md
-  - Annotation: annotation.md
-  - Task Center: task.md
-  - Auto Annotation: auto_annotation.md
-  - View model prediction: prediction.md
+  - Get Started: get_started.md
+  - Tutorial:
+    - Launcher: tutorial/launcher/launcher.md
+    - Web Interface:
+      - Influence: tutorial/web/influence.md
+      - Annotation: tutorial/web/annotation.md
+      - Task Center: tutorial/web/task.md
+      - Auto Annotation: tutorial/web/auto_annotation.md
+      - View model prediction: tutorial/web/prediction.md
+  - System overview: developer/developer_guide.md
