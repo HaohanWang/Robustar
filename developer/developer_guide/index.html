@@ -1,0 +1,867 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+    
+    
+      
+        <title>System overview - robustar-docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5143246d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#developer-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="robustar-docs" class="md-header__button md-logo" aria-label="robustar-docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            robustar-docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              System overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/HaohanWang/Robustar/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../get_started/" class="md-tabs__link">
+      Get Started
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tutorial/launcher/launcher/" class="md-tabs__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      System overview
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="robustar-docs" class="md-nav__button md-logo" aria-label="robustar-docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    robustar-docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/HaohanWang/Robustar/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get_started/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/launcher/launcher/" class="md-nav__link">
+        Launcher
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Web Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web Interface" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Web Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/web/influence/" class="md-nav__link">
+        Influence
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/web/annotation/" class="md-nav__link">
+        Annotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/web/task/" class="md-nav__link">
+        Task Center
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/web/auto_annotation/" class="md-nav__link">
+        Auto Annotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/web/prediction/" class="md-nav__link">
+        View model prediction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          System overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        System overview
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#robustar-architecture" class="md-nav__link">
+    Robustar Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-frontend" class="md-nav__link">
+    The Frontend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-backend" class="md-nav__link">
+    The Backend
+  </a>
+  
+    <nav class="md-nav" aria-label="The Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-file-system-interaction" class="md-nav__link">
+    Backend File System Interaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cicd-tests" class="md-nav__link">
+    CI/CD &amp; Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launcher" class="md-nav__link">
+    Launcher
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#robustar-architecture" class="md-nav__link">
+    Robustar Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-frontend" class="md-nav__link">
+    The Frontend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-backend" class="md-nav__link">
+    The Backend
+  </a>
+  
+    <nav class="md-nav" aria-label="The Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-file-system-interaction" class="md-nav__link">
+    Backend File System Interaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cicd-tests" class="md-nav__link">
+    CI/CD &amp; Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launcher" class="md-nav__link">
+    Launcher
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/HaohanWang/Robustar/edit/master/docs/developer/developer_guide.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="developer-guide">Developer Guide</h1>
+<p>We will go through the implementation details for Robustar. For environment setup issues, please follow the <a href="https://github.com/HaohanWang/Robustar_implementation/blob/main/front-end/README.md">frontend setup guide</a> and <a href="https://github.com/HaohanWang/Robustar_implementation/blob/main/back-end/README.md">backend setup guide</a> in our repository.</p>
+<h2 id="robustar-architecture">Robustar Architecture</h2>
+<p>Robustar's architecture is shown below.</p>
+<p><img alt="robustar_arch.drawio" src="../robustar_arch.drawio.png" /></p>
+<p>Robustar is developed as a Web application wrapped in a docker image. We use Web stack mainly because of the following reasons:</p>
+<ul>
+<li>With Web GUI, we don't need to worry about cross platform issues.</li>
+<li>There is more abundant resources for developing good visual components with Web. </li>
+<li>With a separate frontend and backend, it is easier to refactor Robustar if we want to deploy it on the cloud in a SaaS manner in the future.</li>
+</ul>
+<p>For now, users will need to pull the docker image and host the frontend and backend on their own machines. However, we hide the docker layer away with a launcher. They can simply download the launcher, click a few buttons on the GUI, and then use a browser to use Robustar. The launcher is implemented in Python with <code>pyside2</code> (something similar to <code>PyQT</code>). It can be compiled for multiple systems. We will talk about the launcher later.</p>
+<h2 id="the-frontend">The Frontend</h2>
+<p>Here is a list of the main stack we used for the frontend.</p>
+<table>
+<thead>
+<tr>
+<th>Library / Tool</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML/CSS, JavaScript, Vue.js</td>
+<td>Web basics &amp; frontend framework</td>
+</tr>
+<tr>
+<td>Lerna</td>
+<td>Monorepo management</td>
+</tr>
+<tr>
+<td>Vuetify</td>
+<td>Visual component library</td>
+</tr>
+<tr>
+<td>eslint &amp; prettier</td>
+<td>Code Styling</td>
+</tr>
+<tr>
+<td>Axios</td>
+<td>API client</td>
+</tr>
+<tr>
+<td>Cypress</td>
+<td>Unit tests &amp; end-to-end tests</td>
+</tr>
+</tbody>
+</table>
+<p>Besides, we adopted <a href="https://ui.toast.com/tui-image-editor"><code>tui-image-editor</code></a> to suit our image annotation needs and placed it in our repository. Thus, we have two separate packages for the frontend: <code>image-editor</code> package for <code>tui-image-editor</code> and <code>robustar</code> for the main frontend. <code>robustar</code> package relies on <code>image-editor</code>, and this is managed by <code>lerna</code>.</p>
+<p>The main Robustar interface is in <code>/front-end/packages/robustar/src</code>. These are the most important folders:</p>
+<ul>
+<li><code>views/</code>: Each file corresponds to a page that can be accessed with a different URL. </li>
+<li><code>components/</code>: Stores visual components, for example, model visualizers, that can be used in multiple pages.</li>
+<li><code>services/</code>: Stores all API call utilities.</li>
+</ul>
+<p>For <code>tui-image-editor</code>, please visit <a href="https://github.com/nhn/tui.image-editor">their GitHub page</a>.</p>
+<h2 id="the-backend">The Backend</h2>
+<p>Here are the main backend libraries we used:</p>
+<table>
+<thead>
+<tr>
+<th>Library / Tool</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flask</td>
+<td>API server in Python</td>
+</tr>
+<tr>
+<td>python-socketio</td>
+<td>Socket connection utility</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>Database</td>
+</tr>
+<tr>
+<td>Flashtorch</td>
+<td>Model saliency map visualization</td>
+</tr>
+<tr>
+<td>pytorch_influence_functions</td>
+<td>Influence function calculation</td>
+</tr>
+<tr>
+<td>Pillow</td>
+<td>Python's image library</td>
+</tr>
+<tr>
+<td>PyTorch, torchvision, numpy, scipy</td>
+<td>Machine learning pipeline utilities</td>
+</tr>
+<tr>
+<td>Tensorboard</td>
+<td>Model training visualization</td>
+</tr>
+<tr>
+<td>pytest</td>
+<td>Unit test</td>
+</tr>
+</tbody>
+</table>
+<p>The backend is organized as follows:</p>
+<ul>
+<li><code>apis/</code>:  All API endpoint definitions</li>
+<li><code>ml/</code>: All code related to the machine learning pipeline (e.g., dataset definition, influence calculation, trainer initialization, ...)</li>
+<li><code>modules/</code>: Independent modules (usually code adopted from other places)</li>
+<li><code>bg_remove/</code>: For auto-removing the background of images with a image segmentation model</li>
+<li><code>influence_module/</code>: For influence function calculations</li>
+<li><code>visualize_module</code>: For saliency map visualization (with <code>flashtorch</code>)  </li>
+<li><code>objects/</code>: All important Python Classes</li>
+<li><code>RAutoAnnotator</code>:  A wrapper for image segmentation model for background removal</li>
+<li><code>RDataManager</code>: Represents the entire dataset (all splits + paired data).  A aggregation of <code>RImageFolders</code>.</li>
+<li><code>RImageFolder</code>: Represents a data split. Supports data manipulation and interacts with the SQLite database.</li>
+<li><code>RModelWrapper</code>: A wrapper for models that the user is training / interacting with.</li>
+<li><code>RServer</code>: Represents the entire server instance. Stores useful global information.</li>
+<li><code>RTask</code>: Represents a task (e.g., model training, batch auto-annotation, testing...), which usually takes some time to finish. Can be started / updated / stopped.</li>
+<li><code>utils/</code>: Implementation of APIs.</li>
+<li><code>tests/</code>: Test cases.</li>
+</ul>
+<h3 id="backend-file-system-interaction">Backend File System Interaction</h3>
+<p>The backend will read from / write to the local storage inside the container. Specifically:</p>
+<ul>
+<li>It will initialize a <code>SQLite</code> database if it does not exist. All metadata will be stored in the database. These include:</li>
+<li>All data records</li>
+<li>All visualization records</li>
+<li>All influence records</li>
+<li>All correctly/incorrectly classified samples </li>
+<li>It will save model's checkpoint.</li>
+<li>It will save the images annotated by the user.</li>
+<li>It will save any pre-calculated results, such as visualization images and background removal proposals.</li>
+</ul>
+<p>When starting the container with a launcher, users can mount these files from their file system into the container, so that any changes will be reflected in their file system. Inside the container, the backend will access these files with hard coded paths, which are available in <code>RServer</code> object.</p>
+<h2 id="cicd-tests">CI/CD &amp; Tests</h2>
+<p>Backend tests are available in <code>back-end/tests</code>. Frontend tests are available in <code>front-end/cypress/tests/components</code>. Refer to frontend and backend setup guide in our repo to run these tests locally.</p>
+<p>We use <code>CircleCI</code> to perform <code>CI/CD</code> tasks. The configuration can be found in <code>.circleci/config.yml</code>. We do the following in the pipeline</p>
+<ul>
+<li>Pull code from GitHub</li>
+<li>Download dependencies and dev dataset</li>
+<li>Run all test cases</li>
+<li>Build docker image</li>
+<li>Push docker image to DockerHub</li>
+</ul>
+<p>If the commit is made to the main branch, we will trigger a release build, which has a tag of the format <code>x.y.z</code>. Otherwise, when the any commit is pushed to other branches, we trigger a dev build with tag <code>x.y.&lt;commit_hash&gt;</code>.</p>
+<h2 id="docker">Docker</h2>
+<p>We build a docker image in two steps. First, we will build a base image with <code>/docker-base/DOCKERFILE</code>, which will include all necessary libraries and tools ready, except for everything related to PyTorch. Then, based on the base image, we then build the full image with <code>/DOCKERFILE</code>. Note that we can supply an argument specifying the <code>CUDA</code> version to build for, and the script <code>/scripts/install_pytorch.sh</code> will install the corresponding version.</p>
+<h2 id="launcher">Launcher</h2>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../tutorial/web/prediction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: View model prediction" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              View model prediction
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.top", "navigation.tabs", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      
+    
+  </body>
+</html>
