@@ -22,7 +22,9 @@ For a more academic-style introduction, one can also refer to our workshop paper
 
 [![Demo](https://img.youtube.com/vi/Ezo_dtxZkEk/hqdefault.jpg)](https://youtu.be/Ezo_dtxZkEk)
 
-### Installation 
+### Installation and Usage
+
+- Please see our [documentation](https://haohanwang.github.io/Robustar/) for detailed tutorial
 
 - To install Robustar, please first [intall Docker](https://docs.docker.com/engine/install/) locally. If you wish to use GPU, please install a few more dependencies with`install-nvidia-toolkit.sh` .
 - Then, one can start the robustar with [robustar.sh](https://github.com/HaohanWang/Robustar/blob/main/robustar.sh?raw=1) included in this repository.  You may need to use `sudo` if you are on UNIX systems, or open run a terminal as system admin on Windows.
