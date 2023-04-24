@@ -511,18 +511,17 @@
 
 
 <h1 id="introduction">Introduction</h1>
-<p>Robustar Launcher is an interactive app that you can use to control docker containers of Robustar. You can either run the executable file provided <a href="https://github.com/PaulCCCCCCH/Robustar_implementation/releases/download/launcher-beta/app.exe">here</a> or the code of it to use it.</p>
+<p>Robustar Launcher is an interactive application that enables you to control Docker containers for Robustar. You can download and run the executable file from <a href="https://github.com/PaulCCCCCCH/Robustar_implementation/releases/tag/launcher-v0.3">here</a> or use the provided code to launch the application.</p>
+<p>At present, our software only supports the <strong>Windows</strong> operating system. However, we are planning to expand our support to include other operating systems such as <strong>Linux</strong> and <strong>Mac</strong> in the near future. With Robustar Launcher, you can easily manage and control your Docker containers, making it a powerful tool for your machine learning workflow.</p>
 <h1 id="contents">Contents</h1>
 <ol>
 <li><a href="#overview">Overview of Robustar Launcher</a></li>
 <li><a href="#start">Start Robustar Launcher</a></li>
 <li><a href="#use">Use Robustar Launcher</a></li>
     <ol>
-    <li><a href="#create">Create new docker container</a></li>
-    <li><a href="#check_container">Check existing docker containers</a></li>
-    <li><a href="#manage">Manage existing docker containers</a></li>
-    <li><a href="#check_log">Check container logs</a></li>
-    <li><a href="#profile">Save and load profile</a></li>
+    <li><a href="#create">Create a new container</a></li>
+    <li><a href="#manage">Manage present containers</a></li>
+    <li><a href="#check">Check Launcher outputs</a></li>
     </ol>
 
 <li><a href="#appendix">Appendix</a></li>
@@ -536,101 +535,126 @@
 
 <p>Robustar Launcher is shown below. </p>
 <p><img alt="overview" src="../overview.png" /></p>
-<p>It has three major functional partitions.</p>
-<p>Partition 1 contains 5 interactive buttons respectively used to save or load the proﬁle of the server(i.e. the docker container of Robustar), and start, stop or delete the server.</p>
-<p>Partition 2 is a tab widget containing two tab pages, ’Create’ tab page and ’Manage’ tab page:
-    <ul>
-    <li><code>Create</code> tab page is for inputting information necessary for the creation of a new Robustar docker container.</li> 
-    <li><code>Manage</code> page if for monitoring the existing containers of Robustar.</li>
-    </ul></p>
-<p>Partition 3 is for displaying all the output of the launcher. Depending on the simplicity, the output is displayed diﬀerently in the three tab pages:
-    <ul>
-    <li><code>Prompt</code> tab page is for the simplest prompt given by the launcher program, telling users about whether an operation is carried out successfully.</li>
-    <li><code>Details</code> tab page is for outputting more detailed information yielded during an operation, which will not be displayed in the ’Prompt’ tab page.</li> 
-    <li><code>Logs</code> tab page is the most detailed, allowing users to check all logs redirected from the container.</li>
-    </ul></p>
+<p>The figure above consists of two major parts: the upper part (denoted by <strong><em>a</em></strong>) is for operations and the lower part (denoted by <strong><em>b</em></strong>) is for displaying information.</p>
+<p>Part <strong><em>a</em></strong> contains two tab pages:</p>
+<ul>
+<li>The <strong><em>Create</em></strong> tab page, which is used for creating a new server (i.e., container).</li>
+<li>The <strong><em>Manage</em></strong> tab page, which is used for managing existing servers.</li>
+</ul>
+<p>Part <strong><em>b</em></strong> contains three tab pages:</p>
+<ul>
+<li>
+<p>The <strong><em>Prompts</em></strong> tab page, which displays essential prompts.</p>
+</li>
+<li>
+<p>The <strong><em>Details</em></strong> tab page, which displays more detailed information such as detailed errors and Docker image download progress.</p>
+</li>
+<li>
+<p>The <strong><em>Logs</em></strong> tab page, which displays the complete container logs.</p>
+</li>
+</ul>
 <h3><a id="start">2. Start Robustar Launcher</a></h3>
 
-<p>To run Robustar Launcher. You can either run the executable file or the code to use it. But first you must ensure that few prerequisites are satisﬁed. See <a href='#prerequisite'>here</a> for more information.</p>
-<p>For running:
-    <ul>
-    <li>If you are using the executable file, just double click it and run.</li>
-    <li>If you are using the code, open a terminal under the directory <code>launcher/</code> in the project source code and run the command <code>python app.py</code>
-    </li>
-    </ul>
-  When you start Robustar Launcher successfully, its initial interface appears as shown below containing all the functions required to interact with docker containers of Robustar.</p>
-<p><img alt="start" src="../start.png" /></p>
+<p>To start Robustar Launcher, you can either run the <strong>executable file</strong> or the <strong>source code</strong>. If you want to run the source code, make sure that you have the prerequisites satisﬁed. See <a href='#prerequisite'>here</a> for more information.</p>
+<p>If you start using the executable file:</p>
+<ul>
+<li>For Windows: Just double click the software.</li>
+</ul>
+<!-- Commented out temporarily
+
+- For Linux: Run `sudo ./"Robustar Launcher"`
+
+  (NOTE:`./"Robustar  Launcher"`should be replaced with the proper path of the software on you machine)
+
+-->
+
+<p>If you start using the source code, first make you sure you are in the <strong>launcher/</strong> directory:</p>
+<ul>
+<li>For Windows: run <code>python app.py</code></li>
+</ul>
+<!-- Commented out temporarily
+
+- For Linux: 
+
+-->
+
 <h3><a id="use">3. Use Robustar Launcher</a></h3>
 
 <p>Here is an outline of the various functions of Robustar Launcher:
     <ol type="a">
-    <li><a href="#create">Create new docker container of Robustar</a></li>
-    <li><a href="#check_container">Check existing docker containers of Robustar</a></li>
-    <li><a href="#manage">Manage existing docker containers of Robustar</a></li>
-    <li><a href="#check_log">Check container logs</a></li>
-    <li><a href="#profile">Save and load profile</a></li>
+    <li><a href="#create">Create a new container</a></li>
+    <li><a href="#manage">Manage present containers</a></li>
+    <li><a href="#check_log">Check launcher outputs</a></li>
     </ol></p>
 <p>Detailed instructions of these functions will be provided in turn below.</p>
-<h4><a id="create">3.a. Create new docker container</a></h4>
+<h4><a id="create">3.a. Create a new container</a></h4>
 
-<p>The process can be summarized into the following steps:
-    <ol>
-    <li>Fill in all information in the <code>Create</code> tab page (some have default values).</li>
-    <li>Click the <code>Start Server</code> button.</li>
-    <li>Check the output in the <code>Prompt</code> tab page to see if the operation is carried out successfully. During the process, you can check the download progress in the <code>Details</code> tab page.</li>
-    </ol></p>
-<p>The operation might not ﬁnished immediately so it could take some time for you to see the output, especially when it is your ﬁrst time using the selected docker image.</p>
-<p><em><code>Weight File</code> can only be selected under the directory of <code>Checkpoint</code>. Once you have set the <code>Checkpoint</code> directory, all available weight files under it will be automatically listed in <code>Weight File</code> combo box, from which you can select one to initialize your model.</em></p>
-<h4><a id="check_container">3.b. Check existing docker containers</a></h4>
+<p><img alt="start" src="../start.png" /></p>
+<p>To create a new container, follow these steps:</p>
+<ol>
+<li>Navigate to the <strong><em>Create</em></strong> tab page.</li>
+<li>Complete all the required input fields.</li>
+<li>Click on the <strong><em>Create Server</em></strong> button.</li>
+<li>Monitor the status update on the <strong><em>Prompts</em></strong> tab page to confirm if the creation process was successful.</li>
+</ol>
+<p>Here are specific instructions for completing each input field:</p>
+<ul>
+<li><strong><em>Container Name</em></strong>: Enter a name for the container. Avoid using the same name as an existing container.</li>
+<li><strong><em>Image Version</em></strong>: Select the version of the Docker image to be used for the container.</li>
+<li><strong><em>Port</em></strong>: Enter the port number where the software's webpage will be hosted and can be accessed for interaction.</li>
+<li><strong><em>Train/Validation/Test/Paired Set</em></strong>: Select the root path of the train/validation/test/paired dataset.</li>
+<li><strong><em>Checkpoint</em></strong>: Select the root path where the model checkpoint files will be stored. Files with the <strong>.pth</strong> or <strong>.pt</strong> extension in this path will be provided as options in the <strong><em>Weight File</em></strong> field. The checkpoint files generated during the training process will also be stored here.</li>
+<li><strong><em>Influence Result</em></strong>: Select the root path where the influence calculation results will be stored.</li>
+<li><strong><em>Output Folder</em></strong>: Select the root path where other generated files, such as the database file, will be stored.</li>
+<li><strong><em>Architecture</em></strong>: Select the architecture of the model you want to create.</li>
+<li><strong><em>Pretrained</em></strong>: Choose whether to use the pretrained weight (provided by <strong>torchvision</strong>) of the model.</li>
+<li><strong><em>Weight File</em></strong>: Select the checkpoint file to be used for initializing the weights of the model. Available options are the files with the <strong>.pth</strong> or <strong>.pt</strong> extension in the path set in the <strong><em>Checkpoint</em></strong> field. If you don't want to use a checkpoint file for initialization, select <strong>None</strong>. If you choose <strong><em>Pretrained</em></strong> and select a checkpoint file simultaneously, the model will adhere to the weights in the checkpoint file.</li>
+<li><strong><em>Device</em></strong>: Select the device to run the container.</li>
+<li><strong><em>Shuffle</em></strong>: Choose whether to shuffle the train set.</li>
+<li><strong><em>Batch Size</em></strong>: Enter the batch size for the train, test, and validation data loader.</li>
+<li><strong><em>Worker Number</em></strong>: Enter the number of workers for the data loader.</li>
+<li><strong><em>Class Number</em></strong>: Enter the number of classes of the dataset.</li>
+<li><strong><em>Image Size</em></strong>: Enter the length of the sides of the transformed square image to be inputted into the model.</li>
+<li><strong><em>Image Padding</em></strong>: Choose the mode to be used for padding the image as a square.</li>
+</ul>
+<p>To save time configuring a new container in the future, you can save the current configuration as a <strong>JSON</strong> file by clicking on the <strong><em>Save Profile</em></strong> button. This saves the current configuration profile for future use.</p>
+<p>The next time you want to use the same configuration, simply click on the <strong><em>Load Profile</em></strong> button and select the appropriate <strong>JSON</strong> file. This will load the saved configuration into the launcher, allowing you to quickly create a new container with the same settings.</p>
+<h4><a id="manage">3.b. Manage present containers</a></h4>
 
-<p>You can check all existing containers of Robustar in <code>Manage</code> tab page categorized by their states as shown below.</p>
-<p><img alt="check" src="../check.png" /></p>
-<p>There are three states of containers which we concern:
-    <ul>
-    <li><code>Running</code> containers are currently working.</li>
-    <li><code>Exited</code> containers have exited from running state.</li> 
-    <li><code>Created</code> containers were created, but never had chance to run (most likely due to port conﬂict).</li>
-    </ul></p>
-<p><em>Since the lists update in response to user interaction, when a change happen in the background, they will not be aware of it. On such occasion, you can press the <code>Refresh</code> button on the bottom right corner of the tab page to enforce an update of the lists.</em></p>
-<h4><a id="manage">3.c. Manage existing docker containers</a></h4>
+<p><img alt="manage" src="../manage.png" /></p>
+<p>To mange present containers, follow these steps:</p>
+<ol>
+<li>Navigate to the <strong><em>Manage</em></strong> tab page.</li>
+<li>Select the container to be operated on from the lists of present containers.</li>
+<li>Click on the <strong><em>Start Server</em></strong>/<strong><em>Stop Server</em></strong>/<strong><em>Delete Server</em></strong> button.</li>
+<li>Monitor the status update on the <strong><em>Prompts</em></strong> tab page to confirm if the operation was successful.</li>
+</ol>
+<p>Present containers are categorized into three categories, according to their status:</p>
+<ul>
+<li><strong><em>Running</em></strong>: Containers that are currently running.</li>
+<li><strong><em>Exited</em></strong>: Containers that have exited from the <strong><em>Running</em></strong> state.</li>
+<li><strong><em>Created</em></strong>: Containers that were created but never had the chance to run.</li>
+</ul>
+<p>The Launcher now passively updates the status of the containers. When an operation is conducted successfully, or when you switch from the <strong><em>Create</em></strong> tab page to the <strong><em>Manage</em></strong> tab page, the Launcher will update the status of the containers. However, if you remain on the <strong><em>Manage</em></strong> tab page and the status of a container changes due to reasons other than an operation, the update of its status will not be displayed.</p>
+<p>In such a case, you can manually force a status update by clicking on the <strong><em>Refresh</em></strong> button. This will display the most up-to-date status information for all present containers.</p>
+<h4><a id="check">3.c. Check Launcher outputs</a></h4>
 
-<p>There are three types of management operations, starting, stopping and deleting a server(i.e. a docker container of Robustar), corresponding to the three buttons <code>Start Server</code>, <code>Stop Server</code> and <code>Delete Server</code> on the left hand side. They share the same operation logic:
-    <ol>
-    <li>Click to select a container from the lists in the<code>Manage</code> tab page. A container will be highlighted if selected.</li>
-    <li>Click the corresponding button (<code>Start Server</code>/<code>Stop Server</code>/<code>Delete Server</code>).</li>
-    <li>Check the output in the<code>Prompt</code> tab page to see if the operation is carried out successfully.</li>
-    </ol></p>
-<p>The operation might not ﬁnished immediately so it could take some time for you to see the output.</p>
-<p><em>We also support specifying container to be operated on with the container name inputted when you are in <code>Create</code> tab page. That means when you are in ’Create’ tab page, you can also manage containers by clicking those buttons, and the container with the name you input in <code>Docker Container Name</code> will be operated. However, we suggest you to do so only under one condition, that is when you want to manage the container you just created. In other cases, it would be a better practice to manage the containers in <code>Manage</code> tab page.</em></p>
-<h4><a id="check_log">3.d. Check container logs</a></h4>
-
-<p>You can check the full logs of the running container in the <code>Logs</code> tab page as shown below.</p>
-<p><img alt="log" src="../log.png" /></p>
-<p><em>Currently the launcher only supports showing logs of the most recently started container after the launcher is started. In other words, if a container has been running before the launcher is started, or another container is started after it, then its logs will not be displayed.</em></p>
-<h4><a id="profile">3.e. Save and load proﬁle</a></h4>
-
-<p>You can save and load a profile(i.e. the setting in <code>Create</code> tab page) to save time from inputting duplicate information:
-    <ul>
-    <li>To save a proﬁle:
-      <ol type="1">
-      <li>Click the <code>Save Proﬁle</code> button on the left hand side.</li>
-      <li>Select a place in the pop-up window to save the proﬁle as a <code>.json</code> ﬁle.</li>
-      </ol>
-    </li>
-    <li>To load a proﬁle:
-      <ol>
-      <li>Click the <code>Load Proﬁle</code> button on the left hand side.</li>
-      <li>Select a <code>.json</code> ﬁle containing the proﬁle.</li>
-      </ol>
-    </li>
-    </ul></p>
+<p>There are three tab pages in the Launcher where you can view the output at different levels: the <strong><em>Prompts</em></strong> tab page, the <strong><em>Details</em></strong> tab page, and the <strong><em>Logs</em></strong> tab page.</p>
+<p>In the <strong><em>Prompts</em></strong> tab page, you can view the most essential information, such as whether an operation has been carried out successfully. This tab page provides a summary of the most important information related to the current operation.</p>
+<p><img alt="prompts" src="../prompts.png" /></p>
+<p>In the <strong><em>Details</em></strong> tab page, you can view more detailed information about the current operation, including detailed errors and progress updates for Docker image downloads. This tab page provides a more comprehensive view of the operation, allowing you to troubleshoot issues and monitor progress in more detail.</p>
+<p><img alt="details" src="../details.png" /></p>
+<p>In the <strong><em>Logs</em></strong> tab page, you can view the real-time logs of the containers. Because multiple containers may be running at the same time, an identifier of the format <em>name(port)</em> is inserted after the time stamp for each log.</p>
+<p>Currently, the Launcher only automatically displays the logs of containers that were started during the current session. Logs for containers started before launching the Launcher will not be displayed automatically. However, if you start a new container, the logs of both the newly created container and any previously started containers that are running will be displayed in real-time.</p>
+<p><img alt="logs" src="../logs.png" /></p>
 <h3><a id="appendix">4. Appendix</a></h3>
 
 <h4><a id="prerequisite">4.a. Prerequisites to run Robustar Launcher</a></h4>
 
-<p>To run Robustar Launcher, either the executable file or code, you must install and run the application <code>Docker Desktop</code> in your computer. If you are using <code>Windows</code>, please make sure the setting option in the red box as shown below is checked.</p>
+<p>To run Robustar Launcher, you must have Docker Engine installed and running on your computer. This applies to both the executable file and the code.</p>
+<p>If you're using Windows, ensure that you've exposed the daemon on <em>tcp://localhost:2375</em> without TLS. Shown below is how you can enable this using Docker Desktop:</p>
 <p><img alt="setting" src="../setting.png" /></p>
-<p>If you are using the code to run Robustar Launcher, in addition to the above requirement, you must install Python packges <code>Pyside2</code> and <code>docker</code> in your Python interpreter.</p>
+<p>If you want to run the Launcher from the <strong>source code</strong>, you'll need to install the necessary Python packages. To do this, navigate to the <strong>launcher/</strong> directory and run <code>pip install -r requirements.txt</code> in the command prompt.</p>
 <h4><a id="faq">4.b. Frequently asked questions</a></h4>
 
 
